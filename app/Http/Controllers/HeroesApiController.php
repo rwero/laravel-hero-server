@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 class HeroesApiController extends Controller
 {
     public function index(){
+		if(request()->has('name')){
+			return Hero::where('name','Like','%'.request()->name.'%')->get();
+		}
 		return Hero::all();
 	}
 	public function getHero($id){

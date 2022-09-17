@@ -23,6 +23,7 @@ Route::get("/heroes", [HeroesApiController::class,'index']);
 
 Route::get("/heroes/{id}",[HeroesApiController::class,'getHero']);
 
+
 Route::post("/heroes",[HeroesApiController::class,'create']);
 
 Route::put("/heroes/{id}",[HeroesApiController::class,'update'] );
